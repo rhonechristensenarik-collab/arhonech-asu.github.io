@@ -1,0 +1,60 @@
+:root {
+    --baltic-blue: #22577aff;
+    --tropical-teal: #38a3a5ff;
+    --emerald: #57cc99ff;
+    --light-green: #80ed99ff;
+    --tea-green: #c7f9ccff;
+}
+
+
+
+body {
+    font-family: sans-serif;
+    background-color: var(--baltic-blue);
+    color: var(--tea-green);
+    margin: 5px 500px;
+    padding: 8px;
+}
+
+
+
+input, select, button {
+    margin: 5px 0;
+    padding: 5px;
+    border: none;
+}
+
+button {
+    background-color: var(--emerald);
+    cursor: pointer;
+}
+
+#user-list {
+    list-style: none;
+    padding: 0;
+}
+
+#user-list li {
+    background-color: var(--tropical-teal);
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+#user-list li:hover {
+    background-color: var(--light-green);
+    color: transparent;
+}
+
+#user-list li::after {
+    content: "Remove?";
+    position: absolute;
+    left: 10px;
+    color: var(--baltic-blue);
+    opacity: 0;
+}
+
+#user-list li:hover::after {
+    opacity: 1;
+}
